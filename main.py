@@ -22,8 +22,10 @@ class War(CardGame):
         self.__battle()
 
     def __deal_hand(self, hand):
-        for card in hand:
-            hand.append(card)
+        for _ in range(5):
+            card = self.deck.deal_card()
+            if card:
+                hand.append(card)
 
     # don't touch below this line
 
